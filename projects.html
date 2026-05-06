@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Narendra Anbazhagan</title>
+    <meta
+      name="description"
+      content="Detailed look at AI/ML, VR, and Computer Vision projects by Narendra Anbazhagan."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      .projects-page {
+        padding-top: 10rem;
+      }
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        color: var(--muted);
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 2rem;
+        transition: color 200ms ease;
+      }
+      .back-link:hover {
+        color: var(--ink);
+      }
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+      @media (max-width: 700px) {
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      /* Custom styles for projects-page headers */
+      .projects-page h2 {
+        font-size: clamp(3rem, 10vw, 6rem);
+        margin-bottom: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="glass-bg" aria-hidden="true">
+      <div class="blob b1"></div>
+      <div class="blob b2"></div>
+      <div class="blob b3"></div>
+      <div class="blob b4"></div>
+      <div class="blob b5"></div>
+    </div>
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand" href="index.html">Narendra Anbazhagan</a>
+      <nav class="nav">
+        <a href="index.html#about">About</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="index.html#trivia">Trivia</a>
+        <a href="index.html#contact">Contact</a>
+        <button id="theme-toggle" aria-label="Toggle dark mode" style="background:none; border:none; color:var(--ink); font-size:1.1rem; cursor:pointer; margin-left:1rem;">🌑</button>
+      </nav>
+    </header>
+
+    <main class="projects-page">
+      <a href="index.html" class="back-link">← Home</a>
+      
+      <section class="reveal">
+        <div class="section-heading">
+          <p class="index">04</p>
+          <h2>PROJECT CATALOG</h2>
+        </div>
+        
+        <div class="projects-grid">
+          <article class="project-card featured">
+            <p class="tag">VR · Unity · Medical</p>
+            <h3>Aegis XR - AR/VR Surgery Simulation</h3>
+            <p>
+              Interactive surgical simulation platform using Unity for real-time 3D
+              visualization and procedural training. Realistic anatomy rendering, instrument
+              interaction, and physics-based simulation for medical education. Currently
+              integrating into the HOPS hospital environment.
+            </p>
+            <p class="tech">Unity · XR Toolkit · 3.3.1 · OpenXR · C#</p>
+            <p class="meta">Status: In Progress</p>
+          </article>
+
+          <article class="project-card featured">
+            <p class="tag">Medical · CV</p>
+            <h3>Camera-Guided Ultrasound Simulation</h3>
+            <p>
+              AprilTag-based probe tracking with real-time DICOM slice visualization, in
+              collaboration with IIT Madras (ParavrTech) for low-cost medical training.
+            </p>
+            <p class="tech">AprilTag · DICOM · OpenCV · IIT Madras</p>
+            <p class="meta">Status: In Progress</p>
+          </article>
+
+          <article class="project-card">
+            <p class="tag">Healthcare · ML</p>
+            <h3>AI Digital Stethoscope</h3>
+            <p>
+              Eko Core 500-inspired system with ML-based cardiac anomaly detection,
+              single-lead ECG monitoring, and noise reduction for remote healthcare.
+            </p>
+            <p class="tech">Signal Processing · ECG · ML · Python</p>
+            <p class="meta">Status: In Progress</p>
+          </article>
+
+          <article class="project-card">
+            <p class="tag">ASR · NLP</p>
+            <h3>Telugu ASR - Whisper Model</h3>
+            <p>
+              Automatic Speech Recognition for Telugu using OpenAI Whisper. Fine-tuned on
+              dialect-rich audio with Hugging Face for accurate regional transcription.
+            </p>
+            <p class="tech">Whisper · Hugging Face · Fine-tuning</p>
+            <p class="meta">Status: Completed</p>
+          </article>
+
+          <article class="project-card">
+            <p class="tag">CV · Accessibility</p>
+            <h3>Hand Gesture Recognition</h3>
+            <p>
+              Real-time computer vision system for differently-abled users. Webcam-based
+              gesture tracking and classification enabling accessible communication.
+            </p>
+            <p class="tech">OpenCV · Real-time · Accessibility</p>
+            <p class="meta">Status: Completed</p>
+          </article>
+
+          <article class="project-card">
+            <p class="tag">AI · Chatbot · Telegram</p>
+            <h3>Agricultural AI Chatbot</h3>
+            <p>
+              Telegram bot helping farmers with crop and weather queries using ML-driven
+              contextual replies. Used as a RAG demonstration in interviews.
+            </p>
+            <p class="tech">Telegram API · NLP · RAG</p>
+            <p class="meta">Status: Completed</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Narendra Anbazhagan · Salem, Tamil Nadu, India</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
